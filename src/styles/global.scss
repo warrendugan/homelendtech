@@ -1,0 +1,28 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+@import '~@angular/material/theming';
+
+@import './base/typography';
+@import './base/colors';
+@include mat-core($ld-typography);
+
+$ld-primary: mat-palette($ld-amethyst);
+$ld-accent: mat-palette($ld-lime);
+$ld-warn: mat-palette($ld-peony);
+
+$ld-theme: mat-light-theme($ld-primary, $ld-accent, $ld-warn);
+
+@include angular-material-theme($ld-theme);
+
+$ld-dark-theme: mat-dark-theme($ld-primary, $ld-accent, $ld-warn);
+
+.dark-theme {
+  @include angular-material-theme($ld-dark-theme);
+}

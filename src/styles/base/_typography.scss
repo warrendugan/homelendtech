@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,600|Source+Sans+Pro:300,400,600,700&display=swap');
+$font-families: (
+  source-sans-pro: 'Source Sans Pro',
+  poppins: 'Poppins'
+);
+
+$source-sans-pro: map-get($font-families, 'source-sans-pro');
+$poppins: map-get($font-families, 'poppins');
+$font-weight: (
+  extra-light: 200,
+  light: 300,
+  regular: 400,
+  semi-bold: 600,
+  bold: 700
+);
+
+$fw-extra-light: map-get($font-weight, 'extra-light');
+$fw-light: map-get($font-weight, 'light');
+$fw-regular: map-get($font-weight, 'regular');
+$fw-semi-bold: map-get($font-weight, 'semi-bold');
+$fw-bold: map-get($font-weight, 'bold');
+
+:root {
+  @each $name, $value in $font-weight {
+    --fw-#{$name}: #{$value};
+  }
+}
+
+:root {
+  @each $name, $value in $font-families {
+    --ff-#{$name}: #{$value};
+  }
+}
+
+$ld-typography: mat-typography-config(
+  $font-family: $poppins,
+  $headline: mat-typography-level(64px, 89px, $fw-light),
+  $title: mat-typography-level(52px, 68px, $fw-light),
+  $subheading-2: mat-typography-level(40px, 46px, $fw-light),
+  $subheading-1: mat-typography-level(28px, 40px, $fw-regular),
+  $body-2: mat-typography-level(16px, 24px, $fw-semi-bold, $source-sans-pro),
+  $body-1: mat-typography-level(14px, 20px, $fw-regular, $source-sans-pro),
+  $caption: mat-typography-level(12px, 20px, $fw-regular, $source-sans-pro),
+  $button: mat-typography-level(14px, 44px, $fw-bold, $source-sans-pro),
+  $input: mat-typography-level(inherit, 1.125, $fw-regular, $source-sans-pro)
+);
+
+@include angular-material-typography($ld-typography);
+
+body {
+  font-family: map-get($font-families, 'source-sans-pro');
+}
+
+.h1,
+.mat-h1,
+.mat-headline,
+h1 {
+  font-family: $poppins;
+  font-size: 3.75rem;
+  font-weight: $fw-light;
+  line-height: 89px;
+}
+
+.h2,
+.mat-h2,
+.mat-title,
+h2 {
+  font-family: $poppins;
+  font-size: 3.25rem;
+  font-weight: $fw-light;
+  line-height: 68px;
+}
+
+.h3,
+.mat-h3,
+.mat-subheading-2 h3 {
+  font-family: $poppins;
+  font-size: 2.5rem;
+  font-weight: $fw-light;
+  line-height: 46px;
+  letter-spacing: 0.25px;
+}
+
+.h4,
+.mat-h4,
+.mat-subheading-1,
+h4 {
+  font-family: $poppins;
+  font-size: 1.75rem;
+  font-weight: $fw-regular;
+  line-height: 40px;
+  letter-spacing: 0.25px;
+}
+
+.h5,
+h5 {
+  font-family: $poppins;
+  font-size: 1.25rem;
+  font-weight: $fw-semi-bold;
+  line-height: 28px;
+  letter-spacing: 0.25px;
+}
+
+.h6,
+h6 {
+  font-family: $poppins;
+  font-size: 1rem;
+  font-weight: $fw-semi-bold;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+
+.p12 {
+  font-family: $source-sans-pro;
+  font-size: 0.75rem;
+  line-height: 20px;
+  letter-spacing: 0.15px;
+}
+
+.p14,
+.mat-body-1,
+.mat-body,
+p {
+  font-family: $source-sans-pro;
+  font-size: 0.875rem;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+}
+
+.p16,
+.mat-body-2,
+.mat-body-strong {
+  font-family: $source-sans-pro;
+  font-size: 1rem;
+  line-height: 24px;
+  letter-spacing: 0.25px;
+}
+
+.p20 {
+  font-family: $source-sans-pro;
+  font-size: 1.25rem;
+  line-height: 24px;
+  letter-spacing: 0.25px;
+}
+
+.p22 {
+  font-family: $source-sans-pro;
+  font-size: 1.375rem;
+  line-height: 32px;
+  letter-spacing: 0.25px;
+}
+
+.p24 {
+  font-family: $source-sans-pro;
+  font-size: 1.5rem;
+  line-height: 32px;
+  letter-spacing: 0.25px;
+}
+
+button {
+  font-family: $source-sans-pro;
+}
+
+.overline {
+  font-family: $source-sans-pro;
+  font-size: 0.75rem;
+  line-height: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.caption-12,
+.mat-small,
+.mat-caption {
+  font-family: $poppins;
+  font-size: 0.75rem;
+  font-weight: $fw-regular;
+  line-height: 18px;
+  letter-spacing: 0.25px;
+}
+
+.caption-10 {
+  font-family: $poppins;
+  font-size: 0.625rem;
+  font-weight: $fw-regular;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+}
