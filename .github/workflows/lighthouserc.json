@@ -1,7 +1,11 @@
 {
   "ci": {
     "assert": {
-      "preset": "lighthouse:recommended"
+      "preset": "lighthouse:recommended",
+      "assertions": {
+        "content-width": "off",
+        "unused-css-rules": "off"
+      }
     }
   }
 }
