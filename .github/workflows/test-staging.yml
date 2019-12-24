@@ -1,0 +1,14 @@
+name: Test Staging
+job_id: test_staging
+on: push
+jobs:
+  assert-on-lighthouserc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Run Lighthouse on urls and validate with lighthouserc
+        uses: ./
+        with:
+          urls: 'https://homelendtech-staging.firebaseapp.com'
+          runs: 3
+          configPath: '../lighthouserc.json'

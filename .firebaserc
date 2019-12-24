@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "homelendtech"
+    "default": "homelendtech-staging",
+    "staging": "homelendtech-staging",
+    "production": "homelendtech"
   }
 }
