@@ -47,7 +47,7 @@ jobs:
         with:
           urls: 'https://homelendtech-staging.firebaseapp.com'
           runs: 3
-          configPath: './lighthouserc.json'
+          configPath: '.github/workflows/lighthouserc.json'
   deploy_production:
     name: Deploy to Production
     needs: [build, deploy_staging, test_staging]
