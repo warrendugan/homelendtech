@@ -1,0 +1,22 @@
+mat-toolbar {
+  background-color: var(--ld-white);
+  img {
+    max-width: 100px;
+    margin-right: auto;
+  }
+}
+
+::ng-deep {
+  router-outlet + * {
+    display: block;
+    min-height: calc(100vh - 64px);
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 599px) {
+      min-height: calc(100vh - 56px);
+    }
+  }
+}
