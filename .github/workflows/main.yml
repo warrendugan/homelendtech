@@ -38,6 +38,7 @@ jobs:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_STAGING_TOKEN }}
   test_staging:
     name: Test Staging
+    needs: [build, deploy_staging]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -46,10 +47,10 @@ jobs:
         with:
           urls: 'https://homelendtech-staging.firebaseapp.com'
           runs: 3
-          configPath: '../lighthouserc.json'
+          configPath: './lighthouserc.json'
   deploy_production:
     name: Deploy to Production
-    needs: build
+    needs: [build, deploy_staging, test_staging]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
