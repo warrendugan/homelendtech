@@ -1,7 +1,7 @@
 {
   "ci": {
     "assert": {
-      "preset": "lighthouse:all"
+      "preset": "lighthouse:recommended"
     }
   }
 }
