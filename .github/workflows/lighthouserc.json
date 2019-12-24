@@ -4,7 +4,8 @@
       "preset": "lighthouse:recommended",
       "assertions": {
         "content-width": "off",
-        "unused-css-rules": "off"
+        "unused-css-rules": "off",
+        "canonical": "off"
       }
     }
   }
