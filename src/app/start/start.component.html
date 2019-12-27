@@ -1,0 +1,57 @@
+<section id="start">
+  <h2 class="h4 text-box text-center">Ready to get your best rate?</h2>
+  <mat-grid-list [cols]="columns" rowHeight="100px">
+    <!-- First Name -->
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" floatLabel="always">
+        <mat-label>First Name</mat-label>
+        <input
+          matInput
+          autocapitalize="words"
+          autocomplete="given-name"
+          [formControl]="firstName"
+        />
+        <mat-error *ngIf="firstName.invalid">Please enter your first name</mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <!-- Last Name -->
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" floatLabel="always">
+        <mat-label>Last Name</mat-label>
+        <input
+          matInput
+          autocapitalize="words"
+          autocomplete="family-name"
+          [formControl]="lastName"
+        />
+        <mat-error *ngIf="lastName.invalid">Please enter your last name</mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <!-- Email -->
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" floatLabel="always">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" autocomplete="email" [formControl]="email" />
+        <mat-error *ngIf="email.invalid">Please enter a valid email address</mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <!-- Phone -->
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" floatLabel="always">
+        <mat-label>Phone</mat-label>
+        <input
+          matInput
+          type="text"
+          autocomplete="tel"
+          [formControl]="phone"
+          maxlength="14"
+          mask="(000) 000-0000"
+        />
+        <mat-error *ngIf="phone.invalid">Please enter a valid phone number</mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
+</section>

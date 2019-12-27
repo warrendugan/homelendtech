@@ -1,5 +1,13 @@
-<mat-toolbar class="mat-elevation-z3">
-  <img width="100%" src="assets/ld-logo.svg" alt="loanDepot Logo" />
-  <button mat-raised-button>Get Started</button>
-</mat-toolbar>
-<router-outlet></router-outlet>
+<header id="header">
+  <mat-toolbar class="mat-elevation-z3">
+    <a [routerLink]="['/']">
+      <img width="100%" src="assets/ld-logo.svg" alt="loanDepot Logo" />
+    </a>
+    <button [routerLink]="['/start']" mat-raised-button>
+      Get Started
+    </button>
+  </mat-toolbar>
+</header>
+<main id="main">
+  <router-outlet></router-outlet>
+</main>

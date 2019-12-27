@@ -1,19 +1,30 @@
 mat-toolbar {
   background-color: var(--ld-white);
-  img {
-    max-width: 100px;
+
+  a {
     margin-right: auto;
+    display: flex;
+
+    img {
+      max-width: 100px;
+    }
   }
+}
+
+.container {
+  padding: 0 16px;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 ::ng-deep {
   router-outlet + * {
     display: block;
     min-height: calc(100vh - 64px);
-    padding: 0 16px;
     display: flex;
     align-items: center;
     justify-content: center;
+    @extend .container !optional;
 
     @media (max-width: 599px) {
       min-height: calc(100vh - 56px);

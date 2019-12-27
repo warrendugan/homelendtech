@@ -1,0 +1,70 @@
+.mat-form-field-appearance-outline {
+  .mat-form-field-wrapper {
+    margin-top: 1rem !important;
+
+    .mat-form-field-outline {
+      height: 45px;
+      .mat-form-field-outline-gap {
+        border-top-color: currentColor !important;
+      }
+    }
+
+    .mat-form-field-label-wrapper {
+      left: -0.75em;
+      font-weight: 600;
+      font-size: 14px;
+
+      label {
+        transform: initial !important;
+        position: absolute;
+        top: 1px;
+      }
+    }
+
+    .mat-form-field-infix {
+      border-top: initial;
+      input.mat-input-element {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &.mat-focused:not(.mat-form-field-invalid) {
+    .mat-form-field-outline,
+    .mat-form-field-label,
+    .mat-form-field-required-marker {
+      color: var(--ld-atlantic);
+    }
+
+    .mat-form-field-wrapper .mat-form-field-infix input.mat-input-element {
+      caret-color: var(--ld-atlantic);
+    }
+  }
+
+  &.mat-form-field-invalid {
+    .mat-form-field-outline * {
+      background-color: var(--ld-ruby-50);
+    }
+  }
+
+  &.mat-form-field-autofilled {
+    .mat-form-field-outline * {
+      background-color: var(--ld-atlantic-50);
+    }
+  }
+}
+
+/* Change Autocomplete Styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid transparent;
+  box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
