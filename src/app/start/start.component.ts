@@ -8,11 +8,11 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./start.component.scss']
 })
 export class StartComponent {
-  protected columns: number;
-  protected firstName = new FormControl('', [Validators.required]);
-  protected lastName = new FormControl('', [Validators.required]);
-  protected email = new FormControl('', [Validators.required, Validators.email]);
-  protected phone = new FormControl('', [Validators.required, Validators.maxLength(14)]);
+  public columns: number;
+  public firstName = new FormControl('', [Validators.required]);
+  public lastName = new FormControl('', [Validators.required]);
+  public email = new FormControl('', [Validators.required, Validators.email]);
+  public phone = new FormControl('', [Validators.required, Validators.maxLength(14)]);
   constructor(private breakpointObserver: BreakpointObserver) {
     this.breakpointObserver.observe([Breakpoints.XSmall, Breakpoints.Small]).subscribe((result) => {
       if (result.breakpoints[Breakpoints.XSmall]) {
