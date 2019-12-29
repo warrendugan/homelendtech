@@ -1,4 +1,4 @@
-[![Actions Status](https://xxx.execute-api.us-west-2.amazonaws.com/production/badge/warrendugan/homelendtech)](https://xxx.execute-api.us-west-2.amazonaws.com/production/results/warrendugan/homelendtech)
+![](https://github.com/warrendugan/homelendtech/workflows/.github/workflows/main.yml/badge.svg)
 
 ## Steps taken to create this project:
 
