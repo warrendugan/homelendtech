@@ -12,7 +12,7 @@ export class StartComponent {
   public firstName = new FormControl('', [Validators.required]);
   public lastName = new FormControl('', [Validators.required]);
   public email = new FormControl('', [Validators.required, Validators.email]);
-  public phone = new FormControl('', [Validators.required, Validators.maxLength(14)]);
+  public phone = new FormControl('', [Validators.required]);
   constructor(private breakpointObserver: BreakpointObserver) {
     this.breakpointObserver.observe([Breakpoints.XSmall, Breakpoints.Small]).subscribe((result) => {
       if (result.breakpoints[Breakpoints.XSmall]) {
