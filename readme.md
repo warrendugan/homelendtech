@@ -1,3 +1,5 @@
+[![Actions Status](https://xxx.execute-api.us-west-2.amazonaws.com/production/badge/warrendugan/homelendtech)](https://xxx.execute-api.us-west-2.amazonaws.com/production/results/warrendugan/homelendtech)
+
 ## Steps taken to create this project:
 
 - `ng new homelendtech --skipTests --style=scss`
