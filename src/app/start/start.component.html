@@ -1,9 +1,9 @@
 <section id="start">
-  <h2 class="h4 text-box text-center">Ready to get your best rate?</h2>
+  <h2 class="mat-subheading-1">Ready to get your best rate ever?</h2>
   <mat-grid-list [cols]="columns" rowHeight="100px">
     <!-- First Name -->
     <mat-grid-tile>
-      <mat-form-field appearance="outline" floatLabel="always">
+      <mat-form-field class="mx-sm-3" appearance="outline" floatLabel="always">
         <mat-label>First Name</mat-label>
         <input
           matInput
@@ -17,7 +17,7 @@
 
     <!-- Last Name -->
     <mat-grid-tile>
-      <mat-form-field appearance="outline" floatLabel="always">
+      <mat-form-field class="mx-sm-3" appearance="outline" floatLabel="always">
         <mat-label>Last Name</mat-label>
         <input
           matInput
@@ -31,7 +31,7 @@
 
     <!-- Email -->
     <mat-grid-tile>
-      <mat-form-field appearance="outline" floatLabel="always">
+      <mat-form-field class="mx-sm-3" appearance="outline" floatLabel="always">
         <mat-label>Email</mat-label>
         <input matInput type="email" autocomplete="email" [formControl]="email" />
         <mat-error *ngIf="email.invalid">Please enter a valid email address</mat-error>
@@ -40,7 +40,7 @@
 
     <!-- Phone -->
     <mat-grid-tile>
-      <mat-form-field appearance="outline" floatLabel="always">
+      <mat-form-field class="mx-sm-3" appearance="outline" floatLabel="always">
         <mat-label>Phone</mat-label>
         <input
           matInput

@@ -1,14 +1,21 @@
-img {
-  width: 100%;
-  max-width: 300px;
-  margin-bottom: 64px;
+@import 'breakpoints';
 
-  @media (max-width: 599px) {
-    margin-bottom: 56px;
+#home {
+  figure {
+    img {
+      max-width: 50%;
+    }
+
+    @media (min-width: #{map-get($breakpoints, sm)}) {
+      figcaption {
+        max-width: 80%;
+      }
+    }
+
+    @media (min-width: #{map-get($breakpoints, md)}) {
+      figcaption {
+        max-width: 60%;
+      }
+    }
   }
-}
-
-p {
-  max-width: 350px;
-  margin: 16px auto;
 }

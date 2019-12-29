@@ -1,0 +1,7 @@
+@import './breakpoints';
+
+:root {
+  @each $key, $breakpoint in $breakpoints {
+    --ld-#{$key}: #{$breakpoint};
+  }
+}

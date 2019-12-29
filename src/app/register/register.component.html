@@ -1,0 +1,80 @@
+<section id="register">
+  <div class="container">
+    <h2 class="text-center mat-subheading-1">First, we need to verify you're real.</h2>
+    <mat-horizontal-stepper [linear]="isLinear" #stepper>
+      <mat-step [stepControl]="user">
+        <form class="py-6" [formGroup]="user">
+          <ng-template matStepLabel>Phone or Email</ng-template>
+          <!-- Email -->
+          <mat-form-field class="mx-sm-3" appearance="outline" floatLabel="always">
+            <mat-label>Email</mat-label>
+            <input
+              matInput
+              type="email"
+              autocomplete="email"
+              formControlName="email"
+              (keyup.enter)="stepper.next()"
+              (focus)="requireOnly('email')"
+            />
+            <mat-error *ngIf="user.controls.email?.invalid">
+              Please enter a valid email address
+            </mat-error>
+          </mat-form-field>
+
+          <!-- Phone -->
+          <mat-form-field class="mx-sm-3" appearance="outline" floatLabel="always">
+            <mat-label>Mobile</mat-label>
+            <input
+              matInput
+              type="text"
+              autocomplete="tel"
+              inputmode="tel"
+              formControlName="phone"
+              maxlength="14"
+              mask="(000) 000-0000"
+              (keyup.enter)="stepper.next()"
+              (focus)="requireOnly('phone')"
+            />
+            <mat-error *ngIf="user.controls.phone?.invalid">
+              Please enter a valid phone number
+            </mat-error>
+          </mat-form-field>
+          <div>
+            <button mat-raised-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step class="py-6" [stepControl]="verification">
+        <form [formGroup]="verification">
+          <ng-template matStepLabel>Verification Code</ng-template>
+          <!-- Code -->
+          <mat-form-field class="mx-sm-3" appearance="outline" floatLabel="always">
+            <mat-label>Verification Code</mat-label>
+            <input
+              matInput
+              type="tel"
+              autocomplete="off"
+              formControlName="code"
+              (keyup.enter)="stepper.next()"
+            />
+            <mat-error *ngIf="verification.controls.code.invalid">
+              Incorrect code entered
+            </mat-error>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button class="ml-6" mat-raised-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        You are now done.
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </div>
+</section>

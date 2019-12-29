@@ -1,0 +1,46 @@
+@mixin modifiers($map, $attribute, $prefix: '-', $separator: '-', $base: 500) {
+  @each $key, $value in $map {
+    &#{if($key != $base, #{$prefix}#{$key}, '')} {
+      @if ($key != 'contrast') {
+        @if type-of($value) == 'map' {
+          @include modifiers($value, $attribute, $separator);
+        } @else {
+          #{$attribute}: $value !important;
+          @if ($attribute == 'background-color') {
+            color: map-get(map-get($map, 'contrast'), $key) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@function breakpoint-min($name, $breakpoints: $breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+@function breakpoint-infix($name, $breakpoints: $breakpoints) {
+  @return if(breakpoint-min($name, $breakpoints) == null, '', '-#{$name}');
+}
+
+@mixin media-breakpoint-up($name, $breakpoints: $breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin text-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin transition() {
+  transition: all 300ms ease;
+}

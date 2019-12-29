@@ -29,7 +29,7 @@ import {
   // MatSlideToggleModule,
   // MatSnackBarModule,
   // MatSortModule,
-  // MatStepperModule,
+  MatStepperModule,
   // MatTableModule,
   // MatTabsModule,
   MatToolbarModule
@@ -52,7 +52,7 @@ import {
     // MatCardModule,
     // MatCheckboxModule,
     // MatChipsModule,
-    // MatStepperModule,
+    MatStepperModule,
     MatDatepickerModule,
     // MatDialogModule,
     // MatDividerModule,

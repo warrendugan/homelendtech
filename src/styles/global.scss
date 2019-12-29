@@ -6,11 +6,19 @@ body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
+figure {
+  margin: 0;
+}
 
 @import '~@angular/material/theming';
-
+@import './base/grid';
+@import './base/spacing';
 @import './base/typography';
 @import './base/colors';
+@import './base/mixins';
+@import './base/utilities';
+@import './base/forms';
+
 @include mat-core($ld-typography);
 
 $ld-primary: mat-palette($ld-amethyst);
@@ -25,11 +33,4 @@ $ld-dark-theme: mat-dark-theme($ld-primary, $ld-accent, $ld-warn);
 
 .dark-theme {
   @include angular-material-theme($ld-dark-theme);
-}
-
-@import './base/utilities';
-@import './base/forms';
-
-section {
-  width: 100%;
 }

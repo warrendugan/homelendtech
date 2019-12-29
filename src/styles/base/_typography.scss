@@ -51,138 +51,138 @@ body {
   font-family: map-get($font-families, 'source-sans-pro');
 }
 
-.h1,
-.mat-h1,
-.mat-headline,
-h1 {
-  font-family: $poppins;
-  font-size: 3.75rem;
-  font-weight: $fw-light;
-  line-height: 89px;
-}
+// .h1,
+// .mat-h1,
+// .mat-headline,
+// h1 {
+//   font-family: $poppins;
+//   font-size: 3.75rem;
+//   font-weight: $fw-light;
+//   line-height: 89px;
+// }
 
-.h2,
-.mat-h2,
-.mat-title,
-h2 {
-  font-family: $poppins;
-  font-size: 3.25rem;
-  font-weight: $fw-light;
-  line-height: 68px;
-}
+// .h2,
+// .mat-h2,
+// .mat-title,
+// h2 {
+//   font-family: $poppins;
+//   font-size: 3.25rem;
+//   font-weight: $fw-light;
+//   line-height: 68px;
+// }
 
-.h3,
-.mat-h3,
-.mat-subheading-2 h3 {
-  font-family: $poppins;
-  font-size: 2.5rem;
-  font-weight: $fw-light;
-  line-height: 46px;
-  letter-spacing: 0.25px;
-}
+// // .h3,
+// // .mat-h3,
+// // .mat-subheading-2 h3 {
+// //   font-family: $poppins;
+// //   font-size: 2.5rem;
+// //   font-weight: $fw-light;
+// //   line-height: 46px;
+// //   letter-spacing: 0.25px;
+// // }
 
-.h4,
-.mat-h4,
-.mat-subheading-1,
-h4 {
-  font-family: $poppins;
-  font-size: 1.75rem;
-  font-weight: $fw-regular;
-  line-height: 40px;
-  letter-spacing: 0.25px;
-}
+// .h4,
+// .mat-h4,
+// .mat-subheading-1,
+// h4 {
+//   font-family: $poppins;
+//   font-size: 1.75rem;
+//   font-weight: $fw-regular;
+//   line-height: 40px;
+//   letter-spacing: 0.25px;
+// }
 
-.h5,
-h5 {
-  font-family: $poppins;
-  font-size: 1.25rem;
-  font-weight: $fw-semi-bold;
-  line-height: 28px;
-  letter-spacing: 0.25px;
-}
+// .h5,
+// h5 {
+//   font-family: $poppins;
+//   font-size: 1.25rem;
+//   font-weight: $fw-semi-bold;
+//   line-height: 28px;
+//   letter-spacing: 0.25px;
+// }
 
-.h6,
-h6 {
-  font-family: $poppins;
-  font-size: 1rem;
-  font-weight: $fw-semi-bold;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-}
+// .h6,
+// h6 {
+//   font-family: $poppins;
+//   font-size: 1rem;
+//   font-weight: $fw-semi-bold;
+//   line-height: 24px;
+//   letter-spacing: 0.5px;
+// }
 
-.p12 {
-  font-family: $source-sans-pro;
-  font-size: 0.75rem;
-  line-height: 20px;
-  letter-spacing: 0.15px;
-}
+// .p12 {
+//   font-family: $source-sans-pro;
+//   font-size: 0.75rem;
+//   line-height: 20px;
+//   letter-spacing: 0.15px;
+// }
 
-.p14,
-.mat-body-1,
-.mat-body,
-p {
-  font-family: $source-sans-pro;
-  font-size: 0.875rem;
-  line-height: 20px;
-  letter-spacing: 0.25px;
-}
+// .p14,
+// .mat-body-1,
+// .mat-body,
+// p {
+//   font-family: $source-sans-pro;
+//   font-size: 0.875rem;
+//   line-height: 20px;
+//   letter-spacing: 0.25px;
+// }
 
-.p16,
-.mat-body-2,
-.mat-body-strong {
-  font-family: $source-sans-pro;
-  font-size: 1rem;
-  line-height: 24px;
-  letter-spacing: 0.25px;
-}
+// .p16,
+// .mat-body-2,
+// .mat-body-strong {
+//   font-family: $source-sans-pro;
+//   font-size: 1rem;
+//   line-height: 24px;
+//   letter-spacing: 0.25px;
+// }
 
-.p20 {
-  font-family: $source-sans-pro;
-  font-size: 1.25rem;
-  line-height: 24px;
-  letter-spacing: 0.25px;
-}
+// .p20 {
+//   font-family: $source-sans-pro;
+//   font-size: 1.25rem;
+//   line-height: 24px;
+//   letter-spacing: 0.25px;
+// }
 
-.p22 {
-  font-family: $source-sans-pro;
-  font-size: 1.375rem;
-  line-height: 32px;
-  letter-spacing: 0.25px;
-}
+// .p22 {
+//   font-family: $source-sans-pro;
+//   font-size: 1.375rem;
+//   line-height: 32px;
+//   letter-spacing: 0.25px;
+// }
 
-.p24 {
-  font-family: $source-sans-pro;
-  font-size: 1.5rem;
-  line-height: 32px;
-  letter-spacing: 0.25px;
-}
+// .p24 {
+//   font-family: $source-sans-pro;
+//   font-size: 1.5rem;
+//   line-height: 32px;
+//   letter-spacing: 0.25px;
+// }
 
-button {
-  font-family: $source-sans-pro;
-}
+// button {
+//   font-family: $source-sans-pro;
+// }
 
-.overline {
-  font-family: $source-sans-pro;
-  font-size: 0.75rem;
-  line-height: 16px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
+// .overline {
+//   font-family: $source-sans-pro;
+//   font-size: 0.75rem;
+//   line-height: 16px;
+//   letter-spacing: 1.5px;
+//   text-transform: uppercase;
+// }
 
-.caption-12,
-.mat-small,
-.mat-caption {
-  font-family: $poppins;
-  font-size: 0.75rem;
-  font-weight: $fw-regular;
-  line-height: 18px;
-  letter-spacing: 0.25px;
-}
+// .caption-12,
+// .mat-small,
+// .mat-caption {
+//   font-family: $poppins;
+//   font-size: 0.75rem;
+//   font-weight: $fw-regular;
+//   line-height: 18px;
+//   letter-spacing: 0.25px;
+// }
 
-.caption-10 {
-  font-family: $poppins;
-  font-size: 0.625rem;
-  font-weight: $fw-regular;
-  line-height: 18px;
-  letter-spacing: 0.5px;
-}
+// .caption-10 {
+//   font-family: $poppins;
+//   font-size: 0.625rem;
+//   font-weight: $fw-regular;
+//   line-height: 18px;
+//   letter-spacing: 0.5px;
+// }

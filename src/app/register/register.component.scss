@@ -1,0 +1,15 @@
+@import 'breakpoints';
+
+section {
+  max-width: calc(100vw - var(--ld-gutter-6));
+}
+
+::ng-deep {
+  .mat-step-label {
+    display: none !important;
+
+    @media (min-width: #{map-get($breakpoints, sm)}) {
+      display: initial !important;
+    }
+  }
+}

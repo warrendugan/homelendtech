@@ -44,6 +44,9 @@
             "aot": false,
             "assets": ["src/favicon.ico", "src/assets", "src/manifest.webmanifest"],
             "styles": ["src/styles/global.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/styles/base"]
+            },
             "scripts": []
           },
           "configurations": {
@@ -106,6 +109,9 @@
             "karmaConfig": "karma.conf.js",
             "assets": ["src/favicon.ico", "src/assets", "src/manifest.webmanifest"],
             "styles": ["src/styles/global.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/styles/base"]
+            },
             "scripts": []
           }
         },

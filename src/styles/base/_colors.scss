@@ -783,33 +783,6 @@ $palettes: (
   black: $black
 );
 
-// Generate Utility Classes for all colors
-@mixin modifiers($map, $attribute, $prefix: '-', $separator: '-', $base: 500) {
-  @each $key, $value in $map {
-    &#{if($key != $base, #{$prefix}#{$key}, '')} {
-      @if ($key != 'contrast') {
-        @if type-of($value) == 'map' {
-          @include modifiers($value, $attribute, $separator);
-        } @else {
-          #{$attribute}: $value !important;
-          @if ($attribute == 'background-color') {
-            color: map-get(map-get($map, 'contrast'), $key) !important;
-          }
-        }
-      }
-    }
-  }
-}
-
-.text {
-  @include modifiers($palettes, 'color');
-}
-
-.bg {
-  @include modifiers($palettes, 'background-color');
-}
-
-// Generate CSS variables for all colors
 :root {
   $base: 500;
   @each $name, $value in $palettes {

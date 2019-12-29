@@ -1,8 +1,19 @@
-<section id="home" class="text-center">
-  <h1 class="h3 text-galaxy text-box">loanDepot</h1>
-  <p class="p16 text-galaxy-80 text-box">
-    Get the best rate on your mortgage today. Our site is safe and secure. We use 256 bit encryption
-    to ensure the privacy of our customers.
-  </p>
-  <img width="300px" src="assets/ld-icon.svg" alt="loanDepot Icon" />
+<section id="home">
+  <ng-container *ngFor="let item of items; odd as odd">
+    <div class="container my-8 py-8">
+      <figure
+        class="d-flex flex-column align-items-center"
+        [ngClass]="{ 'flex-lg-row-reverse': odd, 'flex-lg-row': !odd }"
+      >
+        <img width="100%" [src]="item.image.src" [alt]="item.image.alt" />
+        <figcaption
+          class="text-center text-lg-left mt-6 {{ odd }}"
+          [ngClass]="{ 'mr-lg-8': odd, 'ml-lg-8': !odd }"
+        >
+          <h2 class="mat-subheading-1">{{ item.headline }}</h2>
+          <button [routerLink]="item.button.link" mat-raised-button>{{ item.button.text }}</button>
+        </figcaption>
+      </figure>
+    </div>
+  </ng-container>
 </section>
