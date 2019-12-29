@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { MaterialModule } from '../shared/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskModule } from 'ngx-mask';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -20,7 +21,8 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     MaterialModule,
     ReactiveFormsModule,
-    NgxMaskModule.forChild()
+    NgxMaskModule.forChild(),
+    HttpClientModule
   ]
 })
 export class RegisterModule {}

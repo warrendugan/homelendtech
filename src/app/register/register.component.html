@@ -4,23 +4,7 @@
     <mat-horizontal-stepper [linear]="isLinear" #stepper>
       <mat-step [stepControl]="user">
         <form class="py-6" [formGroup]="user">
-          <ng-template matStepLabel>Phone or Email</ng-template>
-          <!-- Email -->
-          <mat-form-field class="mx-sm-3" appearance="outline" floatLabel="always">
-            <mat-label>Email</mat-label>
-            <input
-              matInput
-              type="email"
-              autocomplete="email"
-              formControlName="email"
-              (keyup.enter)="stepper.next()"
-              (focus)="requireOnly('email')"
-            />
-            <mat-error *ngIf="user.controls.email?.invalid">
-              Please enter a valid email address
-            </mat-error>
-          </mat-form-field>
-
+          <ng-template matStepLabel>Phone</ng-template>
           <!-- Phone -->
           <mat-form-field class="mx-sm-3" appearance="outline" floatLabel="always">
             <mat-label>Mobile</mat-label>
@@ -32,15 +16,20 @@
               formControlName="phone"
               maxlength="14"
               mask="(000) 000-0000"
-              (keyup.enter)="stepper.next()"
-              (focus)="requireOnly('phone')"
+              (keyup.enter)="sendVerificationToken(stepper)"
             />
             <mat-error *ngIf="user.controls.phone?.invalid">
               Please enter a valid phone number
             </mat-error>
           </mat-form-field>
           <div>
-            <button mat-raised-button matStepperNext>Next</button>
+            <button
+              mat-raised-button
+              (keyup.space)="sendVerificationToken(stepper)"
+              (click)="sendVerificationToken(stepper)"
+            >
+              Next
+            </button>
           </div>
         </form>
       </mat-step>
@@ -63,16 +52,22 @@
           </mat-form-field>
           <div>
             <button mat-button matStepperPrevious>Back</button>
-            <button class="ml-6" mat-raised-button matStepperNext>Next</button>
+            <button
+              class="ml-6"
+              mat-raised-button
+              (keyup.space)="verifyToken(stepper)"
+              (click)="verifyToken(stepper)"
+            >
+              Next
+            </button>
           </div>
         </form>
       </mat-step>
       <mat-step>
         <ng-template matStepLabel>Done</ng-template>
-        You are now done.
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button (click)="stepper.reset()">Reset</button>
+        <div class="text-center">
+          <h3 class="mat-body-2">Looks like you are quite real.</h3>
+          <button mat-raised-button [routerLink]="['/start']">Apply Online</button>
         </div>
       </mat-step>
     </mat-horizontal-stepper>

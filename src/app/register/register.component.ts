@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms';
-import { ThrowStmt } from '@angular/compiler';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-register',
@@ -11,15 +11,12 @@ export class RegisterComponent implements OnInit {
   public isLinear = true;
   public user: FormGroup;
   public verification: FormGroup;
-  public email: FormControl = new FormControl('', [Validators.required, Validators.email]);
-  public phone: FormControl = new FormControl('', [Validators.required]);
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private http: HttpClient) {}
 
   ngOnInit() {
     this.user = this.fb.group({
-      email: this.email,
-      phone: this.phone
+      phone: ['', [Validators.required]]
     });
 
     this.verification = this.fb.group({
@@ -27,14 +24,24 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  public requireOnly(field: string) {
-    // this.user.addControl('email', this.email);
-    // this.user.addControl('phone', this.phone);
-    // console.log(this.user.controls);
-    // Object.entries(this.user.controls).forEach(([key, value]) => {
-    //   if (key !== field) {
-    //     this.user.removeControl(key);
-    //   }
-    // });
+  public sendVerificationToken(stepper) {
+    this.http
+      .post('/verify/send', { phone: this.user.controls.phone.value })
+      .subscribe((response) => {
+        console.log(response);
+        stepper.next();
+      });
+  }
+
+  public verifyToken(stepper) {
+    this.http
+      .post('/verify/check', {
+        phone: this.user.controls.phone.value,
+        code: this.verification.controls.code.value
+      })
+      .subscribe((response) => {
+        console.log(response);
+        stepper.next();
+      });
   }
 }
