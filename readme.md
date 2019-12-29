@@ -1,4 +1,4 @@
-![](https://github.com/warrendugan/homelendtech/workflows/.github/workflows/main.yml/badge.svg)
+![](https://github.com/warrendugan/homelendtech/workflows/Build%20and%20Deploy%20to%20Production/badge.svg)
 
 ## Steps taken to create this project:
 
