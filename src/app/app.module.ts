@@ -8,6 +8,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { MaterialModule } from './shared/material/material.module';
 import { NgxMaskModule } from 'ngx-mask';
+import { SocialShareService } from './shared/seo/social-share.service';
+import { RouterHelperService } from './shared/seo/router-helper.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +21,7 @@ import { NgxMaskModule } from 'ngx-mask';
     MaterialModule,
     NgxMaskModule.forRoot()
   ],
-  providers: [],
+  providers: [RouterHelperService, SocialShareService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

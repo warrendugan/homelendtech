@@ -1,0 +1,500 @@
+[debug] [2019-12-31T21:20:24.779Z] ----------------------------------------------------------------------
+[debug] [2019-12-31T21:20:24.781Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\warre\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-12-31T21:20:24.781Z] CLI Version:   7.11.0
+[debug] [2019-12-31T21:20:24.781Z] Platform:      win32
+[debug] [2019-12-31T21:20:24.781Z] Node Version:  v12.13.1
+[debug] [2019-12-31T21:20:24.782Z] Time:          Tue Dec 31 2019 13:20:24 GMT-0800 (Pacific Standard Time)
+[debug] [2019-12-31T21:20:24.782Z] ----------------------------------------------------------------------
+[debug] [2019-12-31T21:20:24.782Z] 
+[debug] [2019-12-31T21:20:24.789Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-31T21:20:24.789Z] > authorizing via signed-in user
+[debug] [2019-12-31T21:20:24.789Z] [iam] checking project homelendtech for permissions ["firebase.projects.get"]
+[debug] [2019-12-31T21:20:24.790Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/homelendtech:testIamPermissions  
+
+[debug] [2019-12-31T21:20:25.084Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-31T21:20:25.085Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/homelendtech  
+ 
+[debug] [2019-12-31T21:20:25.256Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\warre\code\homelendtech'...
+[info] 
+[debug] [2019-12-31T21:20:25.259Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/homelendtech/webApps/-/config  
+ 
+[debug] [2019-12-31T21:20:25.523Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: dist/browser
+[info] +  hosting: Local server: http://localhost:5000
+[warn] !  Your requested "node" version "8" doesn't match your global version "12"
+[info] +  functions: Emulator started at http://localhost:5001
+[info] i  functions: Watching "C:\Users\warre\code\homelendtech\functions" for Cloud Functions...
+[debug] [2019-12-31T21:20:27.793Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2019-12-31T21:20:27.794Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2019-12-31T21:20:27.794Z] [worker-pool] submitWork(triggerId=)
+[debug] [2019-12-31T21:20:27.794Z] [worker-~diagnostic~-3c320748-3c6c-4bb3-9cdb-c81312d44433]: Assigning socketPath: \\?\pipe\C:\Users\warre\code\homelendtech\functions\6400
+[debug] [2019-12-31T21:20:27.794Z] [worker-~diagnostic~-3c320748-3c6c-4bb3-9cdb-c81312d44433]: BUSY
+[debug] [2019-12-31T21:20:28.078Z] [runtime-status] [6400] Functions runtime initialized. {"cwd":"C:\\Users\\warre\\code\\homelendtech\\functions","node_version":"12.13.1"}
+[debug] [2019-12-31T21:20:28.079Z] [runtime-status] [6400] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-12-31T21:20:28.081Z] [runtime-status] [6400] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-31T21:20:28.082Z] [runtime-status] [6400] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-31T21:20:28.083Z] [runtime-status] [6400] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  Error: Cannot find module 'require("./server/main")'
+Require stack:
+- C:\Users\warre\code\homelendtech\functions\dist\server.js
+- C:\Users\warre\code\homelendtech\functions\lib\index.js
+- C:\Users\warre\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:797:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:690:27)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at webpackUniversalModuleDefinition (C:\Users\warre\code\homelendtech\functions\dist\server.js:3:28)
+    at Object.<anonymous> (C:\Users\warre\code\homelendtech\functions\dist\server.js:10:3)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+[warn] !  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this.
+[debug] [2019-12-31T21:20:28.482Z] [worker-~diagnostic~-3c320748-3c6c-4bb3-9cdb-c81312d44433]: exited
+[debug] [2019-12-31T21:20:28.482Z] [worker-~diagnostic~-3c320748-3c6c-4bb3-9cdb-c81312d44433]: FINISHED
+[info] [hosting] Rewriting /verify/send to http://localhost:5001/homelendtech/us-central1/ssr for local Function ssr
+[debug] [2019-12-31T21:20:58.432Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-31T21:20:58.432Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-31T21:20:58.432Z] Accepted request POST /homelendtech/us-central1/ssr/verify/send --> ssr
+[debug] [2019-12-31T21:20:58.432Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2019-12-31T21:20:58.439Z] [worker-pool] addWorker(ssr)
+[debug] [2019-12-31T21:20:58.439Z] [worker-pool] Adding worker with key ssr, total=1
+[debug] [2019-12-31T21:20:58.439Z] [worker-pool] submitWork(triggerId=ssr)
+[debug] [2019-12-31T21:20:58.439Z] [worker-ssr-bb02b637-87e2-440d-93ed-dad6c62ccccc]: Assigning socketPath: \\?\pipe\C:\Users\warre\code\homelendtech\functions\5448
+[debug] [2019-12-31T21:20:58.439Z] [worker-ssr-bb02b637-87e2-440d-93ed-dad6c62ccccc]: BUSY
+[info] [hosting] Rewriting /verify/send to http://localhost:5001/homelendtech/us-central1/ssr for local Function ssr
+[debug] [2019-12-31T21:20:58.545Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2019-12-31T21:20:58.545Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2019-12-31T21:20:58.545Z] Accepted request POST /homelendtech/us-central1/ssr/verify/send --> ssr
+[debug] [2019-12-31T21:20:58.550Z] [worker-pool] addWorker(ssr)
+[debug] [2019-12-31T21:20:58.550Z] [worker-pool] Adding worker with key ssr, total=2
+[debug] [2019-12-31T21:20:58.550Z] [worker-pool] submitWork(triggerId=ssr)
+[debug] [2019-12-31T21:20:58.550Z] [worker-ssr-9f87a543-554a-485f-9a44-122ea9fab110]: Assigning socketPath: \\?\pipe\C:\Users\warre\code\homelendtech\functions\2872
+[debug] [2019-12-31T21:20:58.550Z] [worker-ssr-9f87a543-554a-485f-9a44-122ea9fab110]: BUSY
+[debug] [2019-12-31T21:20:58.698Z] [runtime-status] [5448] Functions runtime initialized. {"cwd":"C:\\Users\\warre\\code\\homelendtech\\functions","node_version":"12.13.1"}
+[debug] [2019-12-31T21:20:58.699Z] [runtime-status] [5448] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-12-31T21:20:58.701Z] [runtime-status] [5448] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-31T21:20:58.702Z] [runtime-status] [5448] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-31T21:20:58.703Z] [runtime-status] [5448] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-31T21:20:58.806Z] [runtime-status] [2872] Functions runtime initialized. {"cwd":"C:\\Users\\warre\\code\\homelendtech\\functions","node_version":"12.13.1"}
+[debug] [2019-12-31T21:20:58.807Z] [runtime-status] [2872] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-12-31T21:20:58.809Z] [runtime-status] [2872] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-31T21:20:58.810Z] [runtime-status] [2872] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-31T21:20:58.811Z] [runtime-status] [2872] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  Error: Cannot find module 'require("./server/main")'
+Require stack:
+- C:\Users\warre\code\homelendtech\functions\dist\server.js
+- C:\Users\warre\code\homelendtech\functions\lib\index.js
+- C:\Users\warre\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:797:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:690:27)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at webpackUniversalModuleDefinition (C:\Users\warre\code\homelendtech\functions\dist\server.js:3:28)
+    at Object.<anonymous> (C:\Users\warre\code\homelendtech\functions\dist\server.js:10:3)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+[warn] !  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this.
+[debug] [2019-12-31T21:20:58.930Z] [worker-ssr-bb02b637-87e2-440d-93ed-dad6c62ccccc]: exited
+[debug] [2019-12-31T21:20:58.930Z] [worker-ssr-bb02b637-87e2-440d-93ed-dad6c62ccccc]: FINISHED
+[warn] !  Error: Cannot find module 'require("./server/main")'
+Require stack:
+- C:\Users\warre\code\homelendtech\functions\dist\server.js
+- C:\Users\warre\code\homelendtech\functions\lib\index.js
+- C:\Users\warre\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:797:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:690:27)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at webpackUniversalModuleDefinition (C:\Users\warre\code\homelendtech\functions\dist\server.js:3:28)
+    at Object.<anonymous> (C:\Users\warre\code\homelendtech\functions\dist\server.js:10:3)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+[warn] !  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this.
+[debug] [2019-12-31T21:20:59.029Z] [worker-ssr-9f87a543-554a-485f-9a44-122ea9fab110]: exited
+[debug] [2019-12-31T21:20:59.030Z] [worker-ssr-9f87a543-554a-485f-9a44-122ea9fab110]: FINISHED
+[info] [hosting] Rewriting /verify/send to http://localhost:5001/homelendtech/us-central1/ssr for local Function ssr
+[debug] [2019-12-31T21:21:01.689Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2019-12-31T21:21:01.689Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2019-12-31T21:21:01.689Z] Accepted request POST /homelendtech/us-central1/ssr/verify/send --> ssr
+[debug] [2019-12-31T21:21:01.689Z] [worker-pool] Cleaned up workers for ssr: 2 --> 0
+[debug] [2019-12-31T21:21:01.694Z] [worker-pool] addWorker(ssr)
+[debug] [2019-12-31T21:21:01.694Z] [worker-pool] Adding worker with key ssr, total=1
+[debug] [2019-12-31T21:21:01.694Z] [worker-pool] submitWork(triggerId=ssr)
+[debug] [2019-12-31T21:21:01.694Z] [worker-ssr-cb164bee-e481-4dd2-a02c-32875d99cd46]: Assigning socketPath: \\?\pipe\C:\Users\warre\code\homelendtech\functions\11128
+[debug] [2019-12-31T21:21:01.694Z] [worker-ssr-cb164bee-e481-4dd2-a02c-32875d99cd46]: BUSY
+[debug] [2019-12-31T21:21:01.948Z] [runtime-status] [11128] Functions runtime initialized. {"cwd":"C:\\Users\\warre\\code\\homelendtech\\functions","node_version":"12.13.1"}
+[debug] [2019-12-31T21:21:01.949Z] [runtime-status] [11128] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-12-31T21:21:01.951Z] [runtime-status] [11128] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-31T21:21:01.952Z] [runtime-status] [11128] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-31T21:21:01.952Z] [runtime-status] [11128] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  Error: Cannot find module 'require("./server/main")'
+Require stack:
+- C:\Users\warre\code\homelendtech\functions\dist\server.js
+- C:\Users\warre\code\homelendtech\functions\lib\index.js
+- C:\Users\warre\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:797:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:690:27)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at webpackUniversalModuleDefinition (C:\Users\warre\code\homelendtech\functions\dist\server.js:3:28)
+    at Object.<anonymous> (C:\Users\warre\code\homelendtech\functions\dist\server.js:10:3)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+[warn] !  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this.
+[debug] [2019-12-31T21:21:02.170Z] [worker-ssr-cb164bee-e481-4dd2-a02c-32875d99cd46]: exited
+[debug] [2019-12-31T21:21:02.170Z] [worker-ssr-cb164bee-e481-4dd2-a02c-32875d99cd46]: FINISHED
+[debug] [2019-12-31T21:36:05.600Z] ----------------------------------------------------------------------
+[debug] [2019-12-31T21:36:05.601Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\warre\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-12-31T21:36:05.601Z] CLI Version:   7.11.0
+[debug] [2019-12-31T21:36:05.601Z] Platform:      win32
+[debug] [2019-12-31T21:36:05.601Z] Node Version:  v12.13.1
+[debug] [2019-12-31T21:36:05.602Z] Time:          Tue Dec 31 2019 13:36:05 GMT-0800 (Pacific Standard Time)
+[debug] [2019-12-31T21:36:05.602Z] ----------------------------------------------------------------------
+[debug] [2019-12-31T21:36:05.602Z] 
+[debug] [2019-12-31T21:36:05.608Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-31T21:36:05.608Z] > authorizing via signed-in user
+[debug] [2019-12-31T21:36:05.608Z] [iam] checking project homelendtech for permissions ["firebase.projects.get"]
+[debug] [2019-12-31T21:36:05.610Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/homelendtech:testIamPermissions  
+
+[debug] [2019-12-31T21:36:05.949Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-31T21:36:05.950Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/homelendtech  
+ 
+[debug] [2019-12-31T21:36:06.145Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\warre\code\homelendtech'...
+[info] 
+[debug] [2019-12-31T21:36:06.159Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/homelendtech/webApps/-/config  
+ 
+[debug] [2019-12-31T21:36:06.505Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: dist/browser
+[info] +  hosting: Local server: http://localhost:5000
+[warn] !  Your requested "node" version "8" doesn't match your global version "12"
+[info] +  functions: Emulator started at http://localhost:5001
+[info] i  functions: Watching "C:\Users\warre\code\homelendtech\functions" for Cloud Functions...
+[debug] [2019-12-31T21:36:08.705Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2019-12-31T21:36:08.705Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2019-12-31T21:36:08.705Z] [worker-pool] submitWork(triggerId=)
+[debug] [2019-12-31T21:36:08.705Z] [worker-~diagnostic~-28fabbfa-f03d-4084-9b7a-cfaf2bf0ff17]: Assigning socketPath: \\?\pipe\C:\Users\warre\code\homelendtech\functions\5368
+[debug] [2019-12-31T21:36:08.705Z] [worker-~diagnostic~-28fabbfa-f03d-4084-9b7a-cfaf2bf0ff17]: BUSY
+[debug] [2019-12-31T21:36:08.967Z] [runtime-status] [5368] Functions runtime initialized. {"cwd":"C:\\Users\\warre\\code\\homelendtech\\functions","node_version":"12.13.1"}
+[debug] [2019-12-31T21:36:08.967Z] [runtime-status] [5368] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-12-31T21:36:08.969Z] [runtime-status] [5368] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-31T21:36:08.971Z] [runtime-status] [5368] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-31T21:36:08.971Z] [runtime-status] [5368] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  Error: Cannot find module 'require("./server/main")'
+Require stack:
+- C:\Users\warre\code\homelendtech\functions\dist\server.js
+- C:\Users\warre\code\homelendtech\functions\lib\index.js
+- C:\Users\warre\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:797:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:690:27)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at webpackUniversalModuleDefinition (C:\Users\warre\code\homelendtech\functions\dist\server.js:3:28)
+    at Object.<anonymous> (C:\Users\warre\code\homelendtech\functions\dist\server.js:10:3)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+[warn] !  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this.
+[debug] [2019-12-31T21:36:09.364Z] [worker-~diagnostic~-28fabbfa-f03d-4084-9b7a-cfaf2bf0ff17]: exited
+[debug] [2019-12-31T21:36:09.364Z] [worker-~diagnostic~-28fabbfa-f03d-4084-9b7a-cfaf2bf0ff17]: FINISHED
+[debug] [2019-12-31T21:40:13.724Z] ----------------------------------------------------------------------
+[debug] [2019-12-31T21:40:13.726Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\warre\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-12-31T21:40:13.726Z] CLI Version:   7.11.0
+[debug] [2019-12-31T21:40:13.726Z] Platform:      win32
+[debug] [2019-12-31T21:40:13.726Z] Node Version:  v12.13.1
+[debug] [2019-12-31T21:40:13.727Z] Time:          Tue Dec 31 2019 13:40:13 GMT-0800 (Pacific Standard Time)
+[debug] [2019-12-31T21:40:13.727Z] ----------------------------------------------------------------------
+[debug] [2019-12-31T21:40:13.727Z] 
+[debug] [2019-12-31T21:40:13.733Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-31T21:40:13.734Z] > authorizing via signed-in user
+[debug] [2019-12-31T21:40:13.734Z] [iam] checking project homelendtech for permissions ["firebase.projects.get"]
+[debug] [2019-12-31T21:40:13.735Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/homelendtech:testIamPermissions  
+
+[debug] [2019-12-31T21:40:14.045Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-31T21:40:14.046Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/homelendtech  
+ 
+[debug] [2019-12-31T21:40:14.204Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\warre\code\homelendtech'...
+[info] 
+[debug] [2019-12-31T21:40:14.208Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/homelendtech/webApps/-/config  
+ 
+[debug] [2019-12-31T21:40:14.543Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: dist/browser
+[info] +  hosting: Local server: http://localhost:5000
+[warn] !  Your requested "node" version "8" doesn't match your global version "12"
+[info] +  functions: Emulator started at http://localhost:5001
+[info] i  functions: Watching "C:\Users\warre\code\homelendtech\functions" for Cloud Functions...
+[debug] [2019-12-31T21:40:16.736Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2019-12-31T21:40:16.736Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2019-12-31T21:40:16.736Z] [worker-pool] submitWork(triggerId=)
+[debug] [2019-12-31T21:40:16.736Z] [worker-~diagnostic~-b941fa7e-e905-45f5-a465-3a3e5c9910a5]: Assigning socketPath: \\?\pipe\C:\Users\warre\code\homelendtech\functions\4844
+[debug] [2019-12-31T21:40:16.737Z] [worker-~diagnostic~-b941fa7e-e905-45f5-a465-3a3e5c9910a5]: BUSY
+[debug] [2019-12-31T21:40:16.990Z] [runtime-status] [4844] Functions runtime initialized. {"cwd":"C:\\Users\\warre\\code\\homelendtech\\functions","node_version":"12.13.1"}
+[debug] [2019-12-31T21:40:16.990Z] [runtime-status] [4844] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-12-31T21:40:16.992Z] [runtime-status] [4844] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-31T21:40:16.994Z] [runtime-status] [4844] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-31T21:40:16.994Z] [runtime-status] [4844] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  Error: username is required
+    at new Twilio (C:\Users\warre\code\homelendtech\functions\dist\server.js:208626:11)
+    at initializer (C:\Users\warre\code\homelendtech\functions\dist\server.js:208439:10)
+    at Module.<anonymous> (C:\Users\warre\code\homelendtech\functions\dist\server.js:125:40)
+    at __webpack_require__ (C:\Users\warre\code\homelendtech\functions\dist\server.js:30:30)
+    at C:\Users\warre\code\homelendtech\functions\dist\server.js:94:18
+    at C:\Users\warre\code\homelendtech\functions\dist\server.js:97:10
+    at webpackUniversalModuleDefinition (C:\Users\warre\code\homelendtech\functions\dist\server.js:3:20)
+    at Object.<anonymous> (C:\Users\warre\code\homelendtech\functions\dist\server.js:10:3)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+[warn] !  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this.
+[debug] [2019-12-31T21:40:17.758Z] [worker-~diagnostic~-b941fa7e-e905-45f5-a465-3a3e5c9910a5]: exited
+[debug] [2019-12-31T21:40:17.758Z] [worker-~diagnostic~-b941fa7e-e905-45f5-a465-3a3e5c9910a5]: FINISHED
+[debug] [2019-12-31T21:43:25.133Z] ----------------------------------------------------------------------
+[debug] [2019-12-31T21:43:25.133Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\warre\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-12-31T21:43:25.133Z] CLI Version:   7.11.0
+[debug] [2019-12-31T21:43:25.133Z] Platform:      win32
+[debug] [2019-12-31T21:43:25.133Z] Node Version:  v12.13.1
+[debug] [2019-12-31T21:43:25.133Z] Time:          Tue Dec 31 2019 13:43:25 GMT-0800 (Pacific Standard Time)
+[debug] [2019-12-31T21:43:25.133Z] ----------------------------------------------------------------------
+[debug] [2019-12-31T21:43:25.133Z] 
+[debug] [2019-12-31T21:43:25.148Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-31T21:43:25.148Z] > authorizing via signed-in user
+[debug] [2019-12-31T21:43:25.148Z] [iam] checking project homelendtech for permissions ["firebase.projects.get"]
+[debug] [2019-12-31T21:43:25.148Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/homelendtech:testIamPermissions  
+
+[debug] [2019-12-31T21:43:25.459Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-31T21:43:25.459Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/homelendtech  
+ 
+[debug] [2019-12-31T21:43:25.665Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\warre\code\homelendtech'...
+[info] 
+[debug] [2019-12-31T21:43:25.672Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/homelendtech/webApps/-/config  
+ 
+[debug] [2019-12-31T21:43:25.919Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: dist/browser
+[info] +  hosting: Local server: http://localhost:5000
+[warn] !  Your requested "node" version "8" doesn't match your global version "12"
+[info] +  functions: Emulator started at http://localhost:5001
+[info] i  functions: Watching "C:\Users\warre\code\homelendtech\functions" for Cloud Functions...
+[debug] [2019-12-31T21:43:28.215Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2019-12-31T21:43:28.215Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2019-12-31T21:43:28.215Z] [worker-pool] submitWork(triggerId=)
+[debug] [2019-12-31T21:43:28.215Z] [worker-~diagnostic~-2dc9d756-80b7-4138-a589-d0165b56f7c1]: Assigning socketPath: \\?\pipe\C:\Users\warre\code\homelendtech\functions\6728
+[debug] [2019-12-31T21:43:28.215Z] [worker-~diagnostic~-2dc9d756-80b7-4138-a589-d0165b56f7c1]: BUSY
+[debug] [2019-12-31T21:43:28.457Z] [runtime-status] [6728] Functions runtime initialized. {"cwd":"C:\\Users\\warre\\code\\homelendtech\\functions","node_version":"12.13.1"}
+[debug] [2019-12-31T21:43:28.457Z] [runtime-status] [6728] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-12-31T21:43:28.457Z] [runtime-status] [6728] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-31T21:43:28.457Z] [runtime-status] [6728] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-31T21:43:28.457Z] [runtime-status] [6728] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  undefined
+[warn] !  Error: username is required
+    at new Twilio (C:\Users\warre\code\homelendtech\functions\dist\server.js:251380:11)
+    at initializer (C:\Users\warre\code\homelendtech\functions\dist\server.js:251193:10)
+    at Module.<anonymous> (C:\Users\warre\code\homelendtech\functions\dist\server.js:130:40)
+    at __webpack_require__ (C:\Users\warre\code\homelendtech\functions\dist\server.js:30:30)
+    at C:\Users\warre\code\homelendtech\functions\dist\server.js:94:18
+    at C:\Users\warre\code\homelendtech\functions\dist\server.js:97:10
+    at webpackUniversalModuleDefinition (C:\Users\warre\code\homelendtech\functions\dist\server.js:3:20)
+    at Object.<anonymous> (C:\Users\warre\code\homelendtech\functions\dist\server.js:10:3)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+[warn] !  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this.
+[debug] [2019-12-31T21:43:30.477Z] [worker-~diagnostic~-2dc9d756-80b7-4138-a589-d0165b56f7c1]: exited
+[debug] [2019-12-31T21:43:30.477Z] [worker-~diagnostic~-2dc9d756-80b7-4138-a589-d0165b56f7c1]: FINISHED
+[debug] [2019-12-31T21:47:36.299Z] ----------------------------------------------------------------------
+[debug] [2019-12-31T21:47:36.300Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\warre\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-12-31T21:47:36.300Z] CLI Version:   7.11.0
+[debug] [2019-12-31T21:47:36.301Z] Platform:      win32
+[debug] [2019-12-31T21:47:36.301Z] Node Version:  v12.13.1
+[debug] [2019-12-31T21:47:36.301Z] Time:          Tue Dec 31 2019 13:47:36 GMT-0800 (Pacific Standard Time)
+[debug] [2019-12-31T21:47:36.301Z] ----------------------------------------------------------------------
+[debug] [2019-12-31T21:47:36.302Z] 
+[debug] [2019-12-31T21:47:36.307Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-31T21:47:36.307Z] > authorizing via signed-in user
+[debug] [2019-12-31T21:47:36.308Z] [iam] checking project homelendtech for permissions ["firebase.projects.get"]
+[debug] [2019-12-31T21:47:36.309Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/homelendtech:testIamPermissions  
+
+[debug] [2019-12-31T21:47:36.632Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-31T21:47:36.634Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/homelendtech  
+ 
+[debug] [2019-12-31T21:47:36.794Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\warre\code\homelendtech'...
+[info] 
+[debug] [2019-12-31T21:47:36.797Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/homelendtech/webApps/-/config  
+ 
+[debug] [2019-12-31T21:47:37.035Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: dist/browser
+[info] +  hosting: Local server: http://localhost:5000
+[warn] !  Your requested "node" version "8" doesn't match your global version "12"
+[info] +  functions: Emulator started at http://localhost:5001
+[info] i  functions: Watching "C:\Users\warre\code\homelendtech\functions" for Cloud Functions...
+[debug] [2019-12-31T21:47:39.325Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2019-12-31T21:47:39.325Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2019-12-31T21:47:39.325Z] [worker-pool] submitWork(triggerId=)
+[debug] [2019-12-31T21:47:39.326Z] [worker-~diagnostic~-af7c96cb-dac2-4984-9291-e884d7f13442]: Assigning socketPath: \\?\pipe\C:\Users\warre\code\homelendtech\functions\8760
+[debug] [2019-12-31T21:47:39.326Z] [worker-~diagnostic~-af7c96cb-dac2-4984-9291-e884d7f13442]: BUSY
+[debug] [2019-12-31T21:47:39.576Z] [runtime-status] [8760] Functions runtime initialized. {"cwd":"C:\\Users\\warre\\code\\homelendtech\\functions","node_version":"12.13.1"}
+[debug] [2019-12-31T21:47:39.576Z] [runtime-status] [8760] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-12-31T21:47:39.578Z] [runtime-status] [8760] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-31T21:47:39.580Z] [runtime-status] [8760] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-31T21:47:39.580Z] [runtime-status] [8760] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  Error: Cannot find module 'require("./server/main")'
+Require stack:
+- C:\Users\warre\code\homelendtech\functions\dist\server.js
+- C:\Users\warre\code\homelendtech\functions\lib\index.js
+- C:\Users\warre\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:797:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:690:27)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at webpackUniversalModuleDefinition (C:\Users\warre\code\homelendtech\functions\dist\server.js:3:28)
+    at Object.<anonymous> (C:\Users\warre\code\homelendtech\functions\dist\server.js:10:3)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+[warn] !  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this.
+[debug] [2019-12-31T21:47:41.219Z] [worker-~diagnostic~-af7c96cb-dac2-4984-9291-e884d7f13442]: exited
+[debug] [2019-12-31T21:47:41.219Z] [worker-~diagnostic~-af7c96cb-dac2-4984-9291-e884d7f13442]: FINISHED
+[debug] [2019-12-31T21:55:29.530Z] ----------------------------------------------------------------------
+[debug] [2019-12-31T21:55:29.531Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\warre\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-12-31T21:55:29.531Z] CLI Version:   7.11.0
+[debug] [2019-12-31T21:55:29.531Z] Platform:      win32
+[debug] [2019-12-31T21:55:29.532Z] Node Version:  v12.13.1
+[debug] [2019-12-31T21:55:29.532Z] Time:          Tue Dec 31 2019 13:55:29 GMT-0800 (Pacific Standard Time)
+[debug] [2019-12-31T21:55:29.532Z] ----------------------------------------------------------------------
+[debug] [2019-12-31T21:55:29.532Z] 
+[debug] [2019-12-31T21:55:29.538Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-31T21:55:29.538Z] > authorizing via signed-in user
+[debug] [2019-12-31T21:55:29.539Z] [iam] checking project homelendtech for permissions ["firebase.projects.get"]
+[debug] [2019-12-31T21:55:29.540Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/homelendtech:testIamPermissions  
+
+[debug] [2019-12-31T21:55:29.886Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-31T21:55:29.888Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/homelendtech  
+ 
+[debug] [2019-12-31T21:55:30.085Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\warre\code\homelendtech'...
+[info] 
+[debug] [2019-12-31T21:55:30.089Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/homelendtech/webApps/-/config  
+ 
+[debug] [2019-12-31T21:55:30.346Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: dist/browser
+[info] +  hosting: Local server: http://localhost:5000
+[warn] !  Your requested "node" version "8" doesn't match your global version "12"
+[info] +  functions: Emulator started at http://localhost:5001
+[info] i  functions: Watching "C:\Users\warre\code\homelendtech\functions" for Cloud Functions...
+[debug] [2019-12-31T21:55:32.610Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2019-12-31T21:55:32.611Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2019-12-31T21:55:32.611Z] [worker-pool] submitWork(triggerId=)
+[debug] [2019-12-31T21:55:32.611Z] [worker-~diagnostic~-20c2b365-497c-4105-8156-031425f31b6f]: Assigning socketPath: \\?\pipe\C:\Users\warre\code\homelendtech\functions\3232
+[debug] [2019-12-31T21:55:32.611Z] [worker-~diagnostic~-20c2b365-497c-4105-8156-031425f31b6f]: BUSY
+[debug] [2019-12-31T21:55:32.861Z] [runtime-status] [3232] Functions runtime initialized. {"cwd":"C:\\Users\\warre\\code\\homelendtech\\functions","node_version":"12.13.1"}
+[debug] [2019-12-31T21:55:32.862Z] [runtime-status] [3232] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-12-31T21:55:32.864Z] [runtime-status] [3232] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-31T21:55:32.865Z] [runtime-status] [3232] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-31T21:55:32.866Z] [runtime-status] [3232] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  undefined
+[warn] !  Error: username is required
+    at new Twilio (C:\Users\warre\code\homelendtech\functions\dist\server.js:251380:11)
+    at initializer (C:\Users\warre\code\homelendtech\functions\dist\server.js:251193:10)
+    at Module.<anonymous> (C:\Users\warre\code\homelendtech\functions\dist\server.js:130:40)
+    at __webpack_require__ (C:\Users\warre\code\homelendtech\functions\dist\server.js:30:30)
+    at C:\Users\warre\code\homelendtech\functions\dist\server.js:94:18
+    at C:\Users\warre\code\homelendtech\functions\dist\server.js:97:10
+    at webpackUniversalModuleDefinition (C:\Users\warre\code\homelendtech\functions\dist\server.js:3:20)
+    at Object.<anonymous> (C:\Users\warre\code\homelendtech\functions\dist\server.js:10:3)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+[warn] !  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this.
+[debug] [2019-12-31T21:55:34.802Z] [worker-~diagnostic~-20c2b365-497c-4105-8156-031425f31b6f]: exited
+[debug] [2019-12-31T21:55:34.802Z] [worker-~diagnostic~-20c2b365-497c-4105-8156-031425f31b6f]: FINISHED
+[debug] [2019-12-31T21:57:11.972Z] ----------------------------------------------------------------------
+[debug] [2019-12-31T21:57:11.974Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\warre\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-12-31T21:57:11.974Z] CLI Version:   7.11.0
+[debug] [2019-12-31T21:57:11.974Z] Platform:      win32
+[debug] [2019-12-31T21:57:11.974Z] Node Version:  v12.13.1
+[debug] [2019-12-31T21:57:11.975Z] Time:          Tue Dec 31 2019 13:57:11 GMT-0800 (Pacific Standard Time)
+[debug] [2019-12-31T21:57:11.975Z] ----------------------------------------------------------------------
+[debug] [2019-12-31T21:57:11.975Z] 
+[debug] [2019-12-31T21:57:11.981Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-31T21:57:11.981Z] > authorizing via signed-in user
+[debug] [2019-12-31T21:57:11.981Z] [iam] checking project homelendtech for permissions ["firebase.projects.get"]
+[debug] [2019-12-31T21:57:11.983Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/homelendtech:testIamPermissions  
+
+[debug] [2019-12-31T21:57:12.281Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-31T21:57:12.282Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/homelendtech  
+ 
+[debug] [2019-12-31T21:57:12.440Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\warre\code\homelendtech'...
+[info] 
+[debug] [2019-12-31T21:57:12.443Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/homelendtech/webApps/-/config  
+ 
+[debug] [2019-12-31T21:57:12.959Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: dist/browser
+[info] +  hosting: Local server: http://localhost:5000
+[warn] !  Your requested "node" version "8" doesn't match your global version "12"
+[info] +  functions: Emulator started at http://localhost:5001
+[info] i  functions: Watching "C:\Users\warre\code\homelendtech\functions" for Cloud Functions...
+[debug] [2019-12-31T21:57:14.976Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2019-12-31T21:57:14.976Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2019-12-31T21:57:14.976Z] [worker-pool] submitWork(triggerId=)
+[debug] [2019-12-31T21:57:14.977Z] [worker-~diagnostic~-5619637d-ea62-46a0-a9fe-49ede9ad912f]: Assigning socketPath: \\?\pipe\C:\Users\warre\code\homelendtech\functions\3480
+[debug] [2019-12-31T21:57:14.977Z] [worker-~diagnostic~-5619637d-ea62-46a0-a9fe-49ede9ad912f]: BUSY
+[debug] [2019-12-31T21:57:15.235Z] [runtime-status] [3480] Functions runtime initialized. {"cwd":"C:\\Users\\warre\\code\\homelendtech\\functions","node_version":"12.13.1"}
+[debug] [2019-12-31T21:57:15.236Z] [runtime-status] [3480] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-12-31T21:57:15.238Z] [runtime-status] [3480] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-31T21:57:15.239Z] [runtime-status] [3480] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-31T21:57:15.240Z] [runtime-status] [3480] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\warre\\code\\homelendtech\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  Error: Cannot find module 'require("./server/main")'
+Require stack:
+- C:\Users\warre\code\homelendtech\functions\dist\server.js
+- C:\Users\warre\code\homelendtech\functions\lib\index.js
+- C:\Users\warre\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:797:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:690:27)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at webpackUniversalModuleDefinition (C:\Users\warre\code\homelendtech\functions\dist\server.js:3:28)
+    at Object.<anonymous> (C:\Users\warre\code\homelendtech\functions\dist\server.js:10:3)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+[warn] !  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this.
+[debug] [2019-12-31T21:57:16.876Z] [worker-~diagnostic~-5619637d-ea62-46a0-a9fe-49ede9ad912f]: exited
+[debug] [2019-12-31T21:57:16.877Z] [worker-~diagnostic~-5619637d-ea62-46a0-a9fe-49ede9ad912f]: FINISHED

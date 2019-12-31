@@ -10,7 +10,15 @@ import { HttpClientModule } from '@angular/common/http';
 const routes: Routes = [
   {
     path: '',
-    component: RegisterComponent
+    component: RegisterComponent,
+    data: {
+      seo: {
+        title: 'Register | loanDepot',
+        description:
+          'Registration has never been easier. Sign up now with your mobile phone number to get your best rate ever.',
+        img: '/assets/create-bear.png'
+      }
+    }
   }
 ];
 
