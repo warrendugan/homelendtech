@@ -18,54 +18,13 @@ jobs:
           TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
           TWILIO_ACCOUNT_TOKEN: ${{ secrets.TWILIO_ACCOUNT_TOKEN }}
           TWILIO_VERIFICATION_SERVICE_TOKEN: ${{ secrets.TWILIO_VERIFICATION_SERVICE_TOKEN }}
-      - name: Build Functions
-        run: cd functions/ && npm install && npm run build && cd ../
       - name: Archive Build
         uses: actions/upload-artifact@master
         with:
           name: dist
           path: dist
-      - name: Archive Functions
-        uses: actions/upload-artifact@master
-        with:
-          name: functions
-          path: functions  
-#   deploy_staging:
-#     name: Deploy to Staging
-#     needs: build
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout Repo
-#         uses: actions/checkout@master
-#       - name: Download Artifact
-#         uses: actions/download-artifact@master
-#         with:
-#           name: dist
-#       - name: Download Artifact
-#         uses: actions/download-artifact@master
-#         with:
-#           name: functions
-#       - name: Deploy to Firebase
-#         uses: w9jds/firebase-action@master
-#         with:
-#           args: deploy --only functions,hosting -P staging
-#         env:
-#           FIREBASE_TOKEN: ${{ secrets.FIREBASE_STAGING_TOKEN }}
-#   test_staging:
-#     name: Test Staging
-#     needs: [build, deploy_staging]
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@master
-#       - name: Run Lighthouse on urls and validate with lighthouserc
-#         uses: treosh/lighthouse-ci-action@v2
-#         with:
-#           urls: 'https://homelendtech-staging.firebaseapp.com'
-#           runs: 3
-#           configPath: '.github/workflows/lighthouserc.json'
-  deploy_production:
-    name: Deploy to Production
-#     needs: [build, deploy_staging, test_staging]
+  deploy_staging:
+    name: Deploy to Staging
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -75,10 +34,39 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: dist
-      - name: Download Functions
+      - name: Build Functions
+        run: cd functions/ && npm install && npm run build && cd ../
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only functions,hosting -P staging
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_STAGING_TOKEN }}
+  test_staging:
+    name: Test Staging
+    needs: [build, deploy_staging]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Run Lighthouse on urls and validate with lighthouserc
+        uses: treosh/lighthouse-ci-action@v2
+        with:
+          urls: 'https://homelendtech-staging.firebaseapp.com'
+          runs: 3
+          configPath: '.github/workflows/lighthouserc.json'
+  deploy_production:
+    name: Deploy to Production
+    needs: [build, deploy_staging, test_staging]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Download Build
         uses: actions/download-artifact@master
         with:
-          name: functions
+          name: dist
+      - name: Build Functions
+        run: cd functions/ && npm install && npm run build && cd ../
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
