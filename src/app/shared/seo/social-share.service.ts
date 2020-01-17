@@ -9,7 +9,7 @@ export class SocialShareService {
 
   setData(data) {
     this.setTitle(data.title);
-    //... // set all other meta tags
+    // ... // set all other meta tags
   }
 
   private setTitle(title: string = '') {

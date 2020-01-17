@@ -27,7 +27,6 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_ACCOUNT_TOKEN;
-console.log(accountSid);
 const client = require('twilio')(accountSid, authToken);
 
 // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)

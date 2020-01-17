@@ -29,7 +29,7 @@ export class RouterHelperService {
         filter((route) => route.outlet === 'primary')
       )
       .subscribe((route: ActivatedRoute) => {
-        const seo = route.snapshot.data['seo'];
+        const seo = route.snapshot.data.seo;
         // set your meta tags & title here
         this.seoSocialShareService.setData(seo);
       });
