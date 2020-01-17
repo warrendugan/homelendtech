@@ -37,7 +37,7 @@ jobs:
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only functions, hosting -P staging
+          args: deploy --only functions,hosting -P staging
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_STAGING_TOKEN }}
   test_staging:
@@ -66,6 +66,6 @@ jobs:
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only functions, hosting -P production
+          args: deploy --only functions,hosting -P production
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_PRODUCTION_TOKEN }}
