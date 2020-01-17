@@ -25,6 +25,11 @@ jobs:
         with:
           name: dist
           path: dist
+      - name: Archive Production Artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: functions
+          path: functions  
   deploy_staging:
     name: Deploy to Staging
     needs: build
@@ -36,6 +41,10 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: dist
+      - name: Download Artifact
+        uses: actions/download-artifact@master
+        with:
+          name: functions
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
@@ -65,6 +74,10 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: dist
+      - name: Download Artifact
+        uses: actions/download-artifact@master
+        with:
+          name: functions
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
