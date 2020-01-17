@@ -1,6 +1,7 @@
 (global as any).WebSocket = require('ws');
 (global as any).XMLHttpRequest = require('xhr2');
-const functions = require('firebase-functions');
+
+import * as functions from 'firebase-functions';
 import 'zone.js/dist/zone-node';
 import { enableProdMode } from '@angular/core';
 import * as express from 'express';
@@ -9,7 +10,6 @@ import { join } from 'path';
 // Express server
 export const app = express();
 
-// const PORT = process.env.PORT || 4000;
 const DIST_FOLDER = join(process.cwd(), 'dist/browser');
 
 // Faster server renders w/ Prod mode (dev mode never needed)

@@ -1,5 +1,5 @@
 // Work around for https://github.com/angular/angular-cli/issues/7200
-
+var nodeExternals = require('webpack-node-externals');
 const path = require('path');
 const webpack = require('webpack');
 
@@ -10,6 +10,7 @@ module.exports = {
     server: './server.ts'
   },
   target: 'node',
+  externals: [nodeExternals()],
   resolve: { extensions: ['.ts', '.js'] },
   optimization: {
     minimize: false
