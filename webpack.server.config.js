@@ -9,13 +9,6 @@ module.exports = {
     // This is our Express server for Dynamic universal
     server: './server.ts'
   },
-  externals: [
-    // {
-    //   './dist/server/main': 'require("./server/main")',
-    //   './functions/dist/server/main': 'require("./server/main")'
-    // },
-    /^firebase/
-  ],
   target: 'node',
   resolve: { extensions: ['.ts', '.js'] },
   optimization: {

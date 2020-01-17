@@ -28,7 +28,6 @@ export class RegisterComponent implements OnInit {
     this.http
       .post('/verify/send', { phone: this.user.controls.phone.value })
       .subscribe((response) => {
-        console.log(response);
         stepper.next();
       });
   }
@@ -40,7 +39,6 @@ export class RegisterComponent implements OnInit {
         code: this.verification.controls.code.value
       })
       .subscribe((response) => {
-        console.log(response);
         stepper.next();
       });
   }

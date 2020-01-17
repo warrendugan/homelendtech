@@ -12,12 +12,14 @@ jobs:
         uses: actions/checkout@master
       - name: Install Dependencies
         run: npm install
-      - name: Build
+      - name: Build Angular
         run: npm run build:ssr
         env:
           TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
           TWILIO_ACCOUNT_TOKEN: ${{ secrets.TWILIO_ACCOUNT_TOKEN }}
           TWILIO_VERIFICATION_SERVICE_TOKEN: ${{ secrets.TWILIO_VERIFICATION_SERVICE_TOKEN }}
+      - name: Build Functions
+        run: cd functions/ && npm run build && cd ../
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:

@@ -1,6 +1,6 @@
 (global as any).WebSocket = require('ws');
 (global as any).XMLHttpRequest = require('xhr2');
-
+const functions = require('firebase-functions');
 import 'zone.js/dist/zone-node';
 import { enableProdMode } from '@angular/core';
 import * as express from 'express';
@@ -25,8 +25,8 @@ const {
 
 const bodyParser = require('body-parser');
 require('dotenv').config();
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_ACCOUNT_TOKEN;
+const accountSid = functions.config().process.env.twilioaccountsid;
+const authToken = functions.config().process.env.twilioaccounttoken;
 const client = require('twilio')(accountSid, authToken);
 
 // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
@@ -46,20 +46,18 @@ app.use(bodyParser.urlencoded({ extended: false })); // support encoded bodies
 
 app.post('/verify/send', (req, res) => {
   client.verify
-    .services(process.env.TWILIO_VERIFICATION_SERVICE_TOKEN)
+    .services(functions.config().process.env.twilioverificationservicetoken)
     .verifications.create({ to: `+1${req.body.phone}`, channel: 'sms' })
     .then((verification) => {
-      console.log(verification.sid);
       res.status(200).send();
     });
 });
 
 app.post('/verify/check', (req, res) => {
   client.verify
-    .services('VA0abd6c67e9ea6b675aeca7a3d1f1b395')
+    .services(functions.config().process.env.twilioverificationservicetoken)
     .verificationChecks.create({ to: `+1${req.body.phone}`, code: req.body.code })
     .then((verification_check) => {
-      console.log(verification_check);
       res.status(200).send({ verified: verification_check });
     });
 });
@@ -78,8 +76,3 @@ app.get(
 app.get('*', (req, res) => {
   res.render('index', { req });
 });
-
-// Start up the Node server
-// app.listen(PORT, () => {
-//   console.log(`Node Express server listening on http://localhost:${PORT}`);
-// });
