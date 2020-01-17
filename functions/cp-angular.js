@@ -6,4 +6,5 @@ const fs = require('fs-extra');
 
   await fs.remove(copy);
   await fs.copy(src, copy);
+  await fs.remove('../dist/browser/index.html');
 })();
