@@ -30,3 +30,11 @@
 - Copy the theme color and background color values over as well
 - Delete the manifest link in index.html and delete the file if you added it to the project (you only need manifest.webmanifest, not site.webmanifest)
 - Run `pwa-asset-generator src/assets/ld-icon.svg src/assets/icons -i src/index.html -m src/manifest.webmanifest` to generate the splash screens
+
+
+## Other helpful utilities
+- https://metatags.io/font-generator
+- https://metatags.io/
+- https://coolbackgrounds.io/
+- https://www.online-image-editor.com/
+- https://onlinepngtools.com/
